@@ -1,0 +1,102 @@
+
+application {
+  config {
+    baseName TaskManager,
+    applicationType monolith,
+    packageName com.follo.taskmanager,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework react,
+    buildTool maven
+    cacheProvider	ehcache
+    devDatabaseType	h2Disk
+     enableSwaggerCodegen true
+     enableTranslation	true
+     languages	[en, fr]
+     nativeLanguage	en
+     testFrameworks	 [cypress]
+  }
+  entities *
+  
+  
+}
+ 
+entity Task {
+ 
+description String 
+dueDate ZonedDateTime 
+  
+estimatedTimeToComplete Integer  
+estimatedTimeToCompleteTimeUnit String 
+isReadByAssignTo Boolean
+isUrgent Boolean 
+isRejected Boolean
+isCompleted Boolean
+completedOn ZonedDateTime 
+rejectedOn ZonedDateTime 
+createOn ZonedDateTime 
+updatedOn ZonedDateTime
+} 
+
+entity WorkNotes{ 
+ 
+
+text String required
+createOn ZonedDateTime required
+}
+
+entity Persons{ 
+   
+name String  
+email String required
+role Role required
+phoneNumber String required
+address String
+ 
+createOn ZonedDateTime 
+updatedOn ZonedDateTime
+}
+
+entity Departments{
+   
+name String required
+createOn ZonedDateTime 
+updatedOn ZonedDateTime
+}
+entity Area {
+    
+name String required
+createOn ZonedDateTime 
+updatedOn ZonedDateTime
+}
+entity TaskType {
+    
+name String required
+createOn ZonedDateTime 
+updatedOn ZonedDateTime
+}
+relationship OneToMany {
+  Task{workNotes(text)} to WorkNotes{task}
+  
+}
+
+relationship OneToOne {
+  Task{assignTo(name)} to Persons,  
+  Task{department(name)} to Departments,
+   Task{area(name)} to Area,
+    Task{type(name)} to TaskType,
+   WorkNotes{createBy(name)} to Persons,
+   Persons{Department(name) } to Departments
+}
+
+enum Role {
+  WORKER,
+  MANAGER,
+  ADMIN
+}
+dto * with mapstruct
+
+paginate Task,Persons with pagination
+
+ 
+ 

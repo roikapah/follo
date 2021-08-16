@@ -1,0 +1,26 @@
+{
+  "taskManagerApp": {
+    "taskType": {
+      "home": {
+        "title": "Task Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Task Type",
+        "createOrEditLabel": "Create or edit a Task Type",
+        "notFound": "No Task Types found"
+      },
+      "created": "A new Task Type is created with identifier {{ param }}",
+      "updated": "A Task Type is updated with identifier {{ param }}",
+      "deleted": "A Task Type is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Task Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Task Type"
+      },
+      "id": "ID",
+      "name": "Name",
+      "createOn": "Create On",
+      "updatedOn": "Updated On"
+    }
+  }
+}

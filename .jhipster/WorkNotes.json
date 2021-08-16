@@ -1,0 +1,41 @@
+{
+  "name": "WorkNotes",
+  "fields": [
+    {
+      "fieldName": "text",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createOn",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "persons",
+      "otherEntityRelationshipName": "workNotes",
+      "relationshipName": "createBy",
+      "otherEntityField": "name",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "task",
+      "otherEntityRelationshipName": "workNotes",
+      "relationshipName": "task"
+    }
+  ],
+  "entityTableName": "work_notes",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["TaskManager"],
+  "changelogDate": "20210816212057"
+}

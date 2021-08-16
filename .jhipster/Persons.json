@@ -1,0 +1,57 @@
+{
+  "name": "Persons",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "role",
+      "fieldType": "Role",
+      "fieldValues": "WORKER,MANAGER,ADMIN",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createOn",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "updatedOn",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "departments",
+      "otherEntityRelationshipName": "persons",
+      "relationshipName": "department",
+      "otherEntityField": "name",
+      "ownerSide": true
+    }
+  ],
+  "entityTableName": "persons",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["TaskManager"],
+  "changelogDate": "20210816212157"
+}

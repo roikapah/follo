@@ -1,0 +1,26 @@
+{
+  "taskManagerApp": {
+    "departments": {
+      "home": {
+        "title": "Departments",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Departments",
+        "createOrEditLabel": "Créer ou éditer un Departments",
+        "notFound": "Aucun Departments trouvé"
+      },
+      "created": "Un nouveau Departments a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Departments avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Departments avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Departments {{ id }} ?"
+      },
+      "detail": {
+        "title": "Departments"
+      },
+      "id": "ID",
+      "name": "Name",
+      "createOn": "Create On",
+      "updatedOn": "Updated On"
+    }
+  }
+}

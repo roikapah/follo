@@ -1,0 +1,27 @@
+{
+  "taskManagerApp": {
+    "workNotes": {
+      "home": {
+        "title": "WorkNotes",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Work Notes",
+        "createOrEditLabel": "Créer ou éditer un Work Notes",
+        "notFound": "Aucun Work Notes trouvé"
+      },
+      "created": "Un nouveau Work Notes a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Work Notes avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Work Notes avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Work Notes {{ id }} ?"
+      },
+      "detail": {
+        "title": "Work Notes"
+      },
+      "id": "ID",
+      "text": "Text",
+      "createOn": "Create On",
+      "createBy": "Create By",
+      "task": "Task"
+    }
+  }
+}

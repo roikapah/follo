@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity WorkNotes.
+    -->
+    <changeSet id="20210816212057-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="create_by_id"
+                                 baseTableName="work_notes"
+                                 constraintName="fk_work_notes__create_by_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="persons"/>
+
+        <addForeignKeyConstraint baseColumnNames="task_id"
+                                 baseTableName="work_notes"
+                                 constraintName="fk_work_notes__task_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="task"/>
+    </changeSet>
+</databaseChangeLog>

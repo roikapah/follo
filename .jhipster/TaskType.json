@@ -1,0 +1,29 @@
+{
+  "name": "TaskType",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createOn",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "updatedOn",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "task_type",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["TaskManager"],
+  "changelogDate": "20210816212457"
+}

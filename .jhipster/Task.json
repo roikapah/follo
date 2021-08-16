@@ -1,0 +1,104 @@
+{
+  "name": "Task",
+  "fields": [
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dueDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "estimatedTimeToComplete",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "estimatedTimeToCompleteTimeUnit",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isReadByAssignTo",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isUrgent",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isRejected",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isCompleted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "completedOn",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "rejectedOn",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "createOn",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "updatedOn",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "persons",
+      "otherEntityRelationshipName": "task",
+      "relationshipName": "assignTo",
+      "otherEntityField": "name",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "departments",
+      "otherEntityRelationshipName": "task",
+      "relationshipName": "department",
+      "otherEntityField": "name",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "area",
+      "otherEntityRelationshipName": "task",
+      "relationshipName": "area",
+      "otherEntityField": "name",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "taskType",
+      "otherEntityRelationshipName": "task",
+      "relationshipName": "type",
+      "otherEntityField": "name",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "workNotes",
+      "otherEntityRelationshipName": "task",
+      "relationshipName": "workNotes",
+      "otherEntityField": "text"
+    }
+  ],
+  "entityTableName": "task",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["TaskManager"],
+  "changelogDate": "20210816211957"
+}

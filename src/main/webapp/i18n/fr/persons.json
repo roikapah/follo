@@ -1,0 +1,31 @@
+{
+  "taskManagerApp": {
+    "persons": {
+      "home": {
+        "title": "Persons",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Persons",
+        "createOrEditLabel": "Créer ou éditer un Persons",
+        "notFound": "Aucun Persons trouvé"
+      },
+      "created": "Un nouveau Persons a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Persons avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Persons avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Persons {{ id }} ?"
+      },
+      "detail": {
+        "title": "Persons"
+      },
+      "id": "ID",
+      "name": "Name",
+      "email": "Email",
+      "role": "Role",
+      "phoneNumber": "Phone Number",
+      "address": "Address",
+      "createOn": "Create On",
+      "updatedOn": "Updated On",
+      "department": "Department"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "taskManagerApp": {
+    "Role": {
+      "null": "",
+      "WORKER": "WORKER",
+      "MANAGER": "MANAGER",
+      "ADMIN": "ADMIN"
+    }
+  }
+}
